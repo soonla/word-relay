@@ -1,0 +1,72 @@
+@import "vars";
+@import "mixins";
+
+img {
+  vertical-align: top;
+}
+body {
+  background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05) 1px, 0, transparent 50px) #333;
+  font-family: "Poppins", "Noto Sans KR";
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 18px;
+    text-align: center;
+    color: #111;
+    background-color: #fff;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    @include flexCenter();
+    top: 0;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    @include longShadow(darken(#ccc, 10), right, 30);
+    strong {
+      font-weight: 700;
+    }
+  }
+  #writtenWord {
+    width: 1200px;
+    margin: 250px auto 100px;
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      li {
+        margin: 5px;
+        background-color: rgb(230, 113, 3);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        padding: 20px 30px;
+        overflow: hidden;
+        font-size: 18px;
+        @include longShadow(darken(rgb(230, 113, 3), 10), right, 30);
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  .inputBox {
+    position: fixed;
+    width: 100%;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  #word {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    padding: 20px 50px;
+    font-size: 20px;
+    border-radius: 100px;
+    overflow: hidden;
+    width: 400px;
+  }
+}
